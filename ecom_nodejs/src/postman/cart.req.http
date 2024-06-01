@@ -1,0 +1,69 @@
+@url_dev = http://localhost:3052/v1/api/cart
+###################################################################################################################################################################
+##Cart
+### add to the cart 
+POST {{url_dev}}
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+
+
+{
+    "user_id": "1234",
+    "product":
+    {
+        "product_id": "6645ec3facedd0016f95b4c8",
+        "product_quantity": 1
+    }
+}
+### add to the cart 
+POST {{url_dev}}
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+
+
+{
+    "user_id": "1234",
+    "product":
+    {
+        "product_id": "66473bf59ba92551331d136b",
+        "product_quantity": 1
+    }
+}
+### update cart item quantity
+POST {{url_dev}}/update
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+
+
+{
+    "user_id": "1234",
+    "shop_order_ids":[
+        {
+            "shop_id": "66417c7c05f49905c37716cd",
+            "item_products":
+            {
+                "product_id": "66473bf59ba92551331d136b",
+                "product_quantity": 0,
+                "old_quantity": 1
+            }
+        }
+    ]
+    
+}
+
+### delete cart item
+DELETE {{url_dev}}/6645ec3facedd0016f95b4c8
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+
+{
+    "user_id": "1234"
+}
+### get cart item
+GET {{url_dev}}/items
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+
+{
+    "user_id": "1234"
+}

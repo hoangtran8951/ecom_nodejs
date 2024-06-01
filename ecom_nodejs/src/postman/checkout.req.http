@@ -1,0 +1,113 @@
+@url_dev = http://localhost:3052/v1/api/checkout
+###################################################################################################################################################################
+##CHECKOUT
+### checkout to the order
+POST {{url_dev}}
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+
+
+{
+    "user_id": "1234",
+    "cart_id": "6648905e1e246699a1936d12",
+    "shop_order_ids": [
+        {
+            "shop_id": "66417c7c05f49905c37716cd",
+            "item_products":{
+                "shop_id": "66417c7c05f49905c37716cd",
+                "shop_discounts": [
+                    {
+                        "code": "SHOP4321"
+                    }
+                ],
+                "product_list": [
+                    {
+                        "product_id": "66473bf59ba92551331d136b",
+                        "product_quantity": 1
+                    },
+                    {
+                        "product_id": "6645ec3facedd0016f95b4c8",
+                        "product_quantity": 2
+                    }
+                ]
+            }
+        },
+        {
+            "shop_id": "664167d639419f1b2e6b7bd5",
+            "item_products":{
+                "shop_id": "664167d639419f1b2e6b7bd5",
+                "shop_discounts": [
+                ],
+                "product_list": [
+                    {
+                        "product_id": "6649b8d10bc9b09df7b42527",
+                        "product_quantity": 1
+                    },
+                    {
+                        "product_id": "6649b8b30bc9b09df7b4251f",
+                        "product_quantity": 2
+                    }
+                ]
+            }
+        }
+    ]
+}
+### create a order
+POST {{url_dev}}/order
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+
+
+{
+    "user_id": "1234",
+    "cart_id": "6648905e1e246699a1936d12",
+    "shop_order_ids": [
+        {
+            "shop_id": "66417c7c05f49905c37716cd",
+            "item_products":{
+                "shop_id": "66417c7c05f49905c37716cd",
+                "shop_discounts": [
+                    {
+                        "code": "SHOP4321"
+                    }
+                ],
+                "product_list": [
+                    {
+                        "product_id": "66473bf59ba92551331d136b",
+                        "product_quantity": 1
+                    },
+                    {
+                        "product_id": "6645ec3facedd0016f95b4c8",
+                        "product_quantity": 2
+                    }
+                ]
+            }
+        },
+        {
+            "shop_id": "664167d639419f1b2e6b7bd5",
+            "item_products":{
+                "shop_id": "664167d639419f1b2e6b7bd5",
+                "shop_discounts": [
+                ],
+                "product_list": [
+                    {
+                        "product_id": "6649b8d10bc9b09df7b42527",
+                        "product_quantity": 1
+                    },
+                    {
+                        "product_id": "6649b8b30bc9b09df7b4251f",
+                        "product_quantity": 2
+                    }
+                ]
+            }
+        }
+    ],
+    "user_address": {},
+    "user_payment": {}
+}
+
+# user_id: req.body.user_id,
+#                 cart_id: req.body.cart_id,  
+#                 shop_order_ids: req.body.shop_order_ids,
+#                 user_address: req.body.user_address,
+#                 user_payment: req.body.user_payment

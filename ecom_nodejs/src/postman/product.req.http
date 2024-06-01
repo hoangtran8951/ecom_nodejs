@@ -1,0 +1,169 @@
+@url_dev = http://localhost:3052/v1/api/
+###################################################################################################################################################################
+##PRODUCT
+### create a product
+POST {{url_dev}}product
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 664167d639419f1b2e6b7bd5
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxNjdkNjM5NDE5ZjFiMmU2YjdiZDUiLCJlbWFpbCI6InNob3AwMjExQGdtYWlsLmNvbSIsImlhdCI6MTcxNjEwNjc5MSwiZXhwIjoxNzE2Mjc5NTkxfQ.HDvOrb4iaygD0qwRL9eCkHTPJnH1GFfo-B0kErvZz6A
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxNjdkNjM5NDE5ZjFiMmU2YjdiZDUiLCJlbWFpbCI6InNob3AwMjExQGdtYWlsLmNvbSIsImlhdCI6MTcxNjEwNjc5MSwiZXhwIjoxNzE2NzExNTkxfQ._hz7VZGO-AJ-QGPSMLj2gbvl_9scMN6qnT8OMMe28iQ
+
+
+{
+    "product_name": "New Jeans for shop 2",
+    "product_thumb": "product_thumb",
+    "product_price": 50,
+    "product_description": "High-quality denim jeans",
+    "product_type": "Clothing",
+    "product_quantity": 500,
+    "product_attributes": {
+        "brand": "Levi's",
+        "size": "L",
+        "material": "Denim"
+    }
+}
+### create new eletronic
+
+POST {{url_dev}}product
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 664167d639419f1b2e6b7bd5
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxNjdkNjM5NDE5ZjFiMmU2YjdiZDUiLCJlbWFpbCI6InNob3AwMjExQGdtYWlsLmNvbSIsImlhdCI6MTcxNjEwNjc5MSwiZXhwIjoxNzE2Mjc5NTkxfQ.HDvOrb4iaygD0qwRL9eCkHTPJnH1GFfo-B0kErvZz6A
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxNjdkNjM5NDE5ZjFiMmU2YjdiZDUiLCJlbWFpbCI6InNob3AwMjExQGdtYWlsLmNvbSIsImlhdCI6MTcxNjEwNjc5MSwiZXhwIjoxNzE2NzExNTkxfQ._hz7VZGO-AJ-QGPSMLj2gbvl_9scMN6qnT8OMMe28iQ
+
+
+{
+    "product_name": "iPhone 14 64GB",
+    "product_thumb": "product_thumb",
+    "product_price": 50,
+    "product_description": "New release of the iPhone shop 2",
+    "product_type": "Electronics",
+    "product_quantity": 500,
+    "product_attributes": {
+        "manufacturer": "Apple",
+        "model": "iPhone 14",
+        "color": "Black"
+    }
+}
+### create a new furniture
+POST {{url_dev}}product
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 664167d639419f1b2e6b7bd5
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxNjdkNjM5NDE5ZjFiMmU2YjdiZDUiLCJlbWFpbCI6InNob3AwMjExQGdtYWlsLmNvbSIsImlhdCI6MTcxNjEwNjc5MSwiZXhwIjoxNzE2Mjc5NTkxfQ.HDvOrb4iaygD0qwRL9eCkHTPJnH1GFfo-B0kErvZz6A
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxNjdkNjM5NDE5ZjFiMmU2YjdiZDUiLCJlbWFpbCI6InNob3AwMjExQGdtYWlsLmNvbSIsImlhdCI6MTcxNjEwNjc5MSwiZXhwIjoxNzE2NzExNTkxfQ._hz7VZGO-AJ-QGPSMLj2gbvl_9scMN6qnT8OMMe28iQ
+
+
+{
+    "product_name": "Working desk shop 2",
+    "product_thumb": "product_thumb",
+    "product_price": 100,
+    "product_description": "Modern designed working desk for offices and working environments",
+    "product_type": "Furniture",
+    "product_quantity": 500,
+    "product_attributes": {
+        "brand": "ikea",
+        "size": "2*0.6 m",
+        "material": "Wood"
+    }
+}
+### query all draft for shop
+POST {{url_dev}}product/drafts/all
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+    "pageSize": 10,
+    "pageNumber": 1
+}
+### query all published for shop
+POST {{url_dev}}product/published/all
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+    "pageSize": 10,
+    "pageNumber": 1
+}
+### publish a product
+GET {{url_dev}}product/publish/6649b8b30bc9b09df7b4251f
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 664167d639419f1b2e6b7bd5
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxNjdkNjM5NDE5ZjFiMmU2YjdiZDUiLCJlbWFpbCI6InNob3AwMjExQGdtYWlsLmNvbSIsImlhdCI6MTcxNjEwNjc5MSwiZXhwIjoxNzE2Mjc5NTkxfQ.HDvOrb4iaygD0qwRL9eCkHTPJnH1GFfo-B0kErvZz6A
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxNjdkNjM5NDE5ZjFiMmU2YjdiZDUiLCJlbWFpbCI6InNob3AwMjExQGdtYWlsLmNvbSIsImlhdCI6MTcxNjEwNjc5MSwiZXhwIjoxNzE2NzExNTkxfQ._hz7VZGO-AJ-QGPSMLj2gbvl_9scMN6qnT8OMMe28iQ
+
+{
+}
+
+### unpublish a product
+GET {{url_dev}}product/unpublish/664471c01a3a9e1883fd0564
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+}
+### search product
+GET {{url_dev}}product/search/iphone
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+# x-client-id: 66417c7c05f49905c37716cd
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+# x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+}
+### get all products
+GET {{url_dev}}product
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+# x-client-id: 66417c7c05f49905c37716cd
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+# x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+}
+### get product info by id
+GET {{url_dev}}product/66446bb6234039b4689fe565
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+# x-client-id: 66417c7c05f49905c37716cd
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+# x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+}
+### Patch update a product by id
+PATCH  {{url_dev}}product/6645de73280a2027697d546e
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+    "product_quantity": 300,
+    "product_type": "Clothing",
+    "product_price": null,
+    "product_attributes": {
+        "brand": "Levi's outlet",
+        "size": "S"
+    }
+}

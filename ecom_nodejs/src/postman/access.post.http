@@ -1,0 +1,168 @@
+@url_dev = http://localhost:3052/v1/api/
+### signup
+POST {{url_dev}}shop/signup
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+
+{
+    "name": "shop",
+    "email": "shop212ddfass8ff5d1@gmail.com",
+    "password": "abc123"
+}
+### login
+POST {{url_dev}}shop/login
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+
+{
+    "email": "shop0211@gmail.com",
+    "password": "abc123"
+}
+### logout
+POST {{url_dev}}shop/logout
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NTc3NjYyLCJleHAiOjE3MTU3NTA0NjJ9.UJ4CpugvZkDvNKgwBsZUBgpMjYOCkmT96SgpkxXzWJw
+
+{
+}
+### refreshTokenHandler
+POST {{url_dev}}shop/handlerRefreshToken
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NjY0OTg0LCJleHAiOjE3MTU4Mzc3ODR9._2ruuqiBn3MLwDsQ0DYQW1r-hZk7SozFqng1_lCFPjo
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NjY0OTg0LCJleHAiOjE3MTYyNjk3ODR9.g7WR1Drg5RT7RbKJNk_GDkV3026TQM3Uy1RD7qlHdaY
+
+{
+}   
+###################################################################################################################################################################
+##PRODUCT
+### create a product
+POST {{url_dev}}product
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+    "product_name": "New Jeans",
+    "product_thumb": "product_thumb",
+    "product_price": 50,
+    "product_description": "High-quality denim jeans",
+    "product_type": "Clothing",
+    "product_quantity": 500,
+    "product_attributes": {
+        "brand": "Levi's",
+        "size": "L",
+        "material": "Denim"
+    }
+}
+### create new eletronic
+
+POST {{url_dev}}product
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+    "product_name": "iPhone 14 64GB",
+    "product_thumb": "product_thumb",
+    "product_price": 50,
+    "product_description": "New release of the iPhone",
+    "product_type": "Electronics",
+    "product_quantity": 500,
+    "product_attributes": {
+        "manufacturer": "Apple",
+        "model": "iPhone 14",
+        "color": "Black"
+    }
+}
+### create a new furniture
+POST {{url_dev}}product
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+    "product_name": "Working desk",
+    "product_thumb": "product_thumb",
+    "product_price": 100,
+    "product_description": "Modern designed working desk for offices and working environments",
+    "product_type": "Furniture",
+    "product_quantity": 500,
+    "product_attributes": {
+        "brand": "ikea",
+        "size": "2*0.6 m",
+        "material": "Wood"
+    }
+}
+### query all draft for shop
+POST {{url_dev}}product/drafts/all
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+    "pageSize": 10,
+    "pageNumber": 1
+}
+### query all published for shop
+POST {{url_dev}}product/published/all
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+    "pageSize": 10,
+    "pageNumber": 1
+}
+### publish a product
+POST {{url_dev}}product/publish/66458bf53534ee9c313676d0
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+}
+
+### unpublish a product
+POST {{url_dev}}product/unpublish/664471c01a3a9e1883fd0564
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+}
+### unpublish a product
+POST {{url_dev}}product/search/iphone-14
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+# x-client-id: 66417c7c05f49905c37716cd
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+# x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+}

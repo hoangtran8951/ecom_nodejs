@@ -1,0 +1,86 @@
+@url_dev = http://localhost:3052/v1/api/discount
+###################################################################################################################################################################
+##DISCOUNT
+### create a discount with fixed amount
+POST {{url_dev}}
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+    "code": "SHOP4321",
+    "start_date": "2024-06-01 09:00:00", 
+    "end_date": "2024-06-15 09:00:00", 
+    "is_active": true,
+    "min_order_value": 10000000, 
+    "applies_to": "all", 
+    "name": "Sieu khuyen mai", 
+    "description": "khuyen mai khai truong gian hang",
+    "type": "percentage",
+    "value": 30, 
+    "max_value": 0, 
+    "max_uses": 500, 
+    "uses_count": 0, 
+    "max_users_per_user": 1
+}
+### create a discount with fixed amount
+POST {{url_dev}}
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+x-client-id: 66417c7c05f49905c37716cd
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTU5MzI3NzR9.bru16IC51Rnq4_B012Hr7MwEzMYNbiqEgqjmb0gZAB0
+x-rtoken-id: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxN2M3YzA1ZjQ5OTA1YzM3NzE2Y2QiLCJlbWFpbCI6InNob3AyMTJkZGZhc3M4ZmY1ZDFAZ21haWwuY29tIiwiaWF0IjoxNzE1NzU5OTc0LCJleHAiOjE3MTYzNjQ3NzR9.rXhxQlBM-iUXFw2SLYVY3bOFO8eI1xwzq8Xk4ZJi5BM
+
+
+{
+    "code": "SHOP321",
+    "start_date": "2024-06-01 09:00:00", 
+    "end_date": "2024-06-15 09:00:00", 
+    "is_active": true,
+    "min_order_value": 300000, 
+    "applies_to": "specific", 
+    "name": "Sieu khuyen mai he", 
+    "description": "khuyen mai he 2024",
+    "type": "percentage",
+    "value": 30, 
+    "max_value": 50000, 
+    "max_uses": 500, 
+    "uses_count": 0, 
+    "max_users_per_user": 1,
+    "product_ids": ["6645ec3facedd0016f95b4c8", "66473bf59ba92551331d136b"]
+}
+### get all products with discount code
+GET {{url_dev}}/list_product_code?limit=20&&page=1&&shop_id=66417c7c05f49905c37716cd&&code=SHOP123
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+
+{
+    
+}
+
+### get all products with discount code
+GET {{url_dev}}/amount
+Content-Type: application/json
+x-api-key: 34624c38668686fc809ce7e1274885ad1d13c249d8a89e0b152f6e3594e48873e99f0ffb7032cf5f3728d19ea8b569124ee4d2c69643df19669266115a96d19e
+
+{
+    "code": "SHOP321", 
+    "user_id": "664169f63752b9afc096e2c2", 
+    "shop_id": "66417c7c05f49905c37716cd", 
+    "products": [
+        {
+            "product_id":"6645ec3facedd0016f95b4c8",
+            "product_price": 100000,
+            "product_quantity": 5
+        },
+        {
+            "product_id":"66473bf59ba92551331d136b",
+            "product_price": 50000,
+            "product_quantity": 5
+        }
+    ]
+}
+
